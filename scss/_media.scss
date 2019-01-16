@@ -1,0 +1,375 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+@media screen and (max-width: 1400px){
+	
+
+	.header {
+		&__logo {
+			margin-left: 0px;
+		}
+	}
+
+	.left-sidebar {
+		width: 350px;
+	}
+
+	.main-content {
+		width: 860px;
+	}
+
+	.advice {
+		&__list {
+			/* justify-content: center; */
+		}
+
+		&__item:last-child {
+			display: none;
+		}
+	}
+
+	.footer-content-wrapper {
+		grid-template-areas: 
+			"callback callback callback" 
+			"news news news" 
+			"gallery gallery gallery";
+		grid-gap: 30px 0;
+		grid-template-rows: 1fr auto 1fr;
+    	grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	.news {
+		&__list {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__item {
+			width: 260px;
+			margin: 0;
+			
+		}
+
+		&__item:not(:last-child){
+			margin-right: 40px;
+		}
+	}
+}
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+
+	.header {
+		&__logo {
+			display: none;
+		}
+	}
+
+	.left-sidebar {
+		width: 300px;
+	}
+
+	.main-content {
+		width: 670px;
+	}
+
+	.callback {
+		&__form-block{
+			width: 55%;
+		}
+
+		&__icon {
+			width: 39%;
+			display: flex;
+		}
+	}
+
+	.news {
+		&__title {
+			font-size: 14px;
+		}
+		&__item {
+			border: none;
+		}
+	}
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	
+
+	.hamburger {
+		display: block!important;
+	}
+
+	.header {		
+
+		&__info {
+			justify-content:space-between;
+		}
+
+		&__button {
+			top: auto;
+			bottom: 40px;
+			right: 0;
+		}
+	}
+
+	.main-content {
+		margin-left: 0;
+	}
+
+	.main-nav {
+		&__list {
+			display: none;	
+		}
+	}
+
+	.gosuslugi__caption {
+		text-align: left;
+	}
+
+	.email {
+		padding-bottom: 0;
+	}
+
+	.advantages {
+		display: none;
+	}
+
+	.left-sidebar {
+		display: none;
+	}
+
+	.main-content {
+		width: 100%;
+	}
+
+	.callback {
+		&__form-block{
+			width: 60%;
+		}
+
+		&__icon {
+			width: 40%;
+			display: flex;
+		}
+	}
+
+	
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	.header {
+		&__logo {
+			display: block;
+			position: absolute;
+			width: 120px;
+			top: 40px;
+		}
+
+		&__button {
+			bottom: 40px;
+			right: 0;
+		}
+	}
+
+	.company-name {
+		padding-left: 110px;
+	}
+
+	.gosuslugi {
+		display: none;
+	}
+
+	.page-footer {
+
+		&__logo{
+			display: none;	
+		}
+
+		&__block-group {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+
+		&__bottom-links {
+			display: none;	
+		}
+	}
+}
+
+@media screen and (min-width: 450px) and (max-width: 576px){
+	.header {
+		&__button {
+			display: none;
+		}
+	}
+
+	.callback {
+		&__form{
+			width: 90%;
+		}
+
+		&__form-block{
+			width: 100%;
+		}
+
+		&__icon {
+			display: none;
+		}
+	}
+
+	.about-us {
+
+		img {
+			display: none;
+		}
+	}
+
+	.advice {
+		&__list {
+			justify-content: center;
+		}
+	}
+
+	.footer-content-wrapper {
+		grid-template-areas: 
+			"callback" 
+			"gallery";
+		grid-gap: 30px 0;
+		grid-template-rows: 370px 1fr;
+    	grid-template-columns: 1fr;
+	}
+
+	.news {
+		display: none;
+	}
+
+	.page-footer {
+		&__item {
+			width: 50%;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+
+	.hamburger {
+		position: absolute;
+		top: 10px;
+		right: -15px;
+	}
+
+	.header {	
+
+		&__logo {
+			display: none;
+		}	
+
+		&__info {
+			padding: 15px 20px;
+			justify-content: space-between;
+		}
+
+		&__button {
+			display: none;
+		}
+	}
+
+	.company-name {
+		padding-left: 0px;
+
+		font-size: 30px;
+		line-height: 30px;
+
+		& span {
+			font-size: 26px;
+		}
+	}
+
+	.phone {
+		padding-bottom: 0;
+	}
+
+	.email {
+		display: none;
+	}
+
+	.callback {
+		&__form{
+			width: 90%;
+		}
+
+		&__form-block{
+			width: 100%;
+		}
+
+		&__icon {
+			display: none;
+		}
+	}
+
+	.about-us {
+
+		img {
+			display: none;
+		}
+	}
+
+	.advice {
+		&__list {
+			justify-content: center;
+		}
+	}
+
+	.footer-content-wrapper {
+		grid-template-areas: 
+			"callback" 
+			"gallery";
+		grid-gap: 30px 0;
+		grid-template-rows: 370px 1fr;
+    	grid-template-columns: 1fr;
+	}
+
+	.news {
+		display: none;
+	}
+
+	.page-footer {
+		&__item {
+			width: 50%;
+			padding-bottom: 20px;
+		}
+	}
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
